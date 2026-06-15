@@ -1,0 +1,9 @@
+Flask
+Flask-CORS
+scikit-learn
+lightgbm
+pandas
+numpy
+imbalanced-learn
+xgboost
+optuna
