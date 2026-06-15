@@ -5,5 +5,8 @@ lightgbm
 pandas
 numpy
 imbalanced-learn
-xgboost
+xgboost-cpu
 optuna
+psycopg2-binary
+boto3
+python-dotenv

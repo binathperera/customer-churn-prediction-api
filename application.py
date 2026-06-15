@@ -21,14 +21,17 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
+# Get the directory where application.py is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Global variables to store model and preprocessors
 model = None
 scaler = None
 le_geography = None
 le_gender = None
-model_path = "lgbm_model.pkl"
-scaler_path = "scaler.pkl"
-encoders_path = "encoders.pkl"
+scaler_path = os.path.join(BASE_DIR, "scaler.pkl")
+model_path = os.path.join(BASE_DIR, "lgbm_model.pkl")
+encoders_path = os.path.join(BASE_DIR, "encoders.pkl")
 
 #PostgreSQL Database Configuration
 # DB_PARAMS = {
