@@ -522,7 +522,6 @@ def get_data_stats():
     except Exception as e:
         return jsonify({'error': f'Error calculating statistics: {str(e)}'}), 500
 
-
-if __name__ == '__main__':
-    load_or_create_model()
+load_or_create_model()
+if __name__ == '__application__':
     app.run(debug=True, host='0.0.0.0', port=5000)
